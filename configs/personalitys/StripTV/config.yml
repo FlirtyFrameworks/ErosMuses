@@ -15,7 +15,7 @@ persona:
 
   # Name the AI will use to refer to itself
   #   default: oobabot
-  ai_name:
+  ai_name: 'StripTV'
 
   # This prefix will be added in front of every user-supplied request.  This is useful for
   # setting up a 'character' for the bot to play.  Alternatively, this can be set with the
@@ -35,7 +35,7 @@ persona:
   # messages it sees with a matching word. The bot will always reply to @-mentions and
   # direct messages, even if no wakewords are supplied.
   #   default: ['oobabot']
-  wakewords:
+  wakewords: ['StripTV']
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # discord
@@ -53,20 +53,20 @@ discord:
 
   # Number of lines of chat history the AI will see when generating a response.
   #   default: 7
-  history_lines:
+  history_lines: 
 
   # If set, the bot will not respond to direct messages.
   #   default: False
-  ignore_dms:
+  ignore_dms: true
 
   # Set the log level.  Valid values are:
   # CRITICAL, ERROR, WARNING, INFO, DEBUG
   #   default: DEBUG
-  log_level:
+  log_level: DEBUG
 
   # If set, the bot will generate a thread to respond in if it is not already in one.
   #   default: False
-  reply_in_thread:
+  reply_in_thread: True
 
   # A list of strings that will cause the bot to stop generating a response when
   # encountered.
@@ -76,7 +76,7 @@ discord:
   # FEATURE PREVIEW: Stream responses into a single message as they are generated. Note: may
   # be janky
   #   default: False
-  stream_responses:
+  stream_responses: True
 
   # FEATURE PREVIEW: When streaming responses, cap the rate at which we send updates to
   # Discord to be no more than once per this many seconds.  This does not guarantee that
@@ -123,7 +123,7 @@ oobabooga:
 
   # Print all AI input and output to STDOUT.
   #   default: False
-  log_all_the_things:
+  log_all_the_things: True
 
   # A regex that will be used to extract message lines from the AI's output.  The first
   # capture group will be used as the message.  If this is not set, the entire output will

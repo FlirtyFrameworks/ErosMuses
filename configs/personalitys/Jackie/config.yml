@@ -15,12 +15,12 @@ persona:
 
   # Name the AI will use to refer to itself
   #   default: oobabot
-  ai_name:
+  ai_name: "Jackie"
 
   # This prefix will be added in front of every user-supplied request.  This is useful for
   # setting up a 'character' for the bot to play.  Alternatively, this can be set with the
   # OOBABOT_PERSONA environment variable.
-  persona:
+  persona: 
 
   # Path to a file containing a persona.  This can be just a single string, a json file in
   # the common "tavern" formats, or a yaml file in the Oobabooga format.  With a single
@@ -28,14 +28,14 @@ persona:
   # be overwritten with the values in the file.  Also, the wakewords will be extended to
   # include the character's own name.
   #   default:
-  persona_file:
+  persona_file: 
 
   # One or more words that the bot will listen for. The bot will listen in all discord
   # channels it can access for one of these words to be mentioned, then reply to any
   # messages it sees with a matching word. The bot will always reply to @-mentions and
   # direct messages, even if no wakewords are supplied.
   #   default: ['oobabot']
-  wakewords:
+  wakewords: ['Jackie']
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # discord
@@ -53,11 +53,11 @@ discord:
 
   # Number of lines of chat history the AI will see when generating a response.
   #   default: 7
-  history_lines:
+  history_lines: '15'
 
   # If set, the bot will not respond to direct messages.
   #   default: False
-  ignore_dms:
+  ignore_dms: 'true'
 
   # Set the log level.  Valid values are:
   # CRITICAL, ERROR, WARNING, INFO, DEBUG
@@ -76,7 +76,7 @@ discord:
   # FEATURE PREVIEW: Stream responses into a single message as they are generated. Note: may
   # be janky
   #   default: False
-  stream_responses:
+  stream_responses: 'true'
 
   # FEATURE PREVIEW: When streaming responses, cap the rate at which we send updates to
   # Discord to be no more than once per this many seconds.  This does not guarantee that
@@ -99,7 +99,7 @@ discord:
   # wakeword.  If unsolicited replies are disabled, the unsolicited_channel_cap setting will
   # have no effect.
   #   default: False
-  disable_unsolicited_replies:
+  disable_unsolicited_replies: 
 
   # FEATURE PREVIEW: Path to the Discrivener executable. Will enable prototype voice
   # integration.
@@ -123,7 +123,7 @@ oobabooga:
 
   # Print all AI input and output to STDOUT.
   #   default: False
-  log_all_the_things:
+  log_all_the_things: 'true'
 
   # A regex that will be used to extract message lines from the AI's output.  The first
   # capture group will be used as the message.  If this is not set, the entire output will
@@ -198,8 +198,8 @@ stable_diffusion:
     sampler_name: ''
     seed: -1
     steps: 30
-    width: 512
-    height: 512
+    width: 1024
+    height: 1024
 
   # These parameters can be overridden by the Discord user by including them in their image
   # generation request.  The format for this is: param_name=value  This is a whitelist of
