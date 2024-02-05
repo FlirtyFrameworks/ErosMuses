@@ -28,7 +28,7 @@ persona:
   # be overwritten with the values in the file.  Also, the wakewords will be extended to
   # include the character's own name.
   #   default:
-  persona_file:
+  persona_file: 
 
   # One or more words that the bot will listen for. The bot will listen in all discord
   # channels it can access for one of these words to be mentioned, then reply to any
@@ -182,24 +182,24 @@ stable_diffusion:
 
   # This will be appended to every image generation prompt sent to Stable Diffusion.
   #   default:
-  extra_prompt_text:
+  extra_prompt_text: succubus, beautiful woman, intense, otherworldly, macabre, voloptuous, sexy, nsfw, intricate outfit, rough brushwork, hasty strokes, art by Casey Baugh
 
   # A dictionary which will be passed straight through to Stable Diffusion on every request.
   # Feel free to add additional simple parameters here as Stable Diffusion's API evolves.
   # See Stable Diffusion's documentation for what these parameters mean.
   request_params:
-    cfg_scale: 7
+    cfg_scale: 2
     do_not_save_samples: true
     do_not_save_grid: true
     enable_hr: false
     model: ''
-    negative_prompt: animal harm, suicide, loli, nsfw
-    negative_prompt_nsfw: animal harm, suicide, loli
+    negative_prompt: Compression artifacts, rain, raining, visible teeth, fused body parts, mutated anatomy, jungle, bad art, worst quality, low quality, plastic, fake, bad limbs, conjoined, featureless, bad features, incorrect objects, ((watermark, logo, signature, words, letters))
+    negative_prompt_nsfw: Compression artifacts, rain, raining, visible teeth, fused body parts, mutated anatomy, jungle, bad art, worst quality, low quality, plastic, fake, bad limbs, conjoined, featureless, bad features, incorrect objects, ((watermark, logo, signature, words, letters))
     sampler_name: ''
     seed: -1
-    steps: 30
-    width: 512
-    height: 512
+    steps: 5
+    width: 1024
+    height: 1024
 
   # These parameters can be overridden by the Discord user by including them in their image
   # generation request.  The format for this is: param_name=value  This is a whitelist of
