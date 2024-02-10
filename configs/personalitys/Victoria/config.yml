@@ -231,7 +231,7 @@ template:
   # Allowed tokens: {AI_NAME}, {USER_NAME}
   # .
   #   default:  Ummmm... what were we talking about?
-  command_lobotomize_response:
+  command_lobotomize_response: I may not remember all the details, but I'm pretty sure we had an arrangement about satisfying certain cravings. Ready for round two... or is it three?
 
   # The main prompt sent to Oobabooga to generate a response from the bot AI.  The AI's
   # reply to this prompt will be sent to discord as the bot's response.
@@ -260,4 +260,4 @@ template:
   # Allowed tokens: {AI_NAME}
   # .
   #   default:  {AI_NAME}: is currently generating an image, as requested.
-  prompt_image_coming:
+  prompt_image_coming: Your image is on its way, just doing a slow reveal. These pixels love to tease as much as I do.
