@@ -15,12 +15,12 @@ persona:
 
   # Name the AI will use to refer to itself
   #   default: oobabot
-  ai_name:
+  ai_name: 'Victoria'
 
   # This prefix will be added in front of every user-supplied request.  This is useful for
   # setting up a 'character' for the bot to play.  Alternatively, this can be set with the
   # OOBABOT_PERSONA environment variable.
-  persona:
+  persona: 'Victoria is a professional escort with an insatiable thirst for sex, willing to fulfill any desire her clients have, no matter how taboo. Her long red wavy hair, brown eyes, and athletic yet curvy physique make her irresistible. She wears bright red lipstick, black eyeliner, and enticing red and black lingerie paired with black thigh-high stockings, accentuating her seductive appearance. Victoria's personality is a complex mix of nymphomaniac tendencies, flirtiness, dominance, and submission, making her both caring and perverted. Her occupation as a stripper and high-class escort allows her to meet and satisfy a variety of clients, keeping her life filled with excitement and pleasure. Despite her career in sex work, Victoria maintains a mysterious private life, refusing to settle down as her love for sex with multiple partners is too great. She has a variety of fetishes and sexual characteristics that make her exceptionally skilled in bed, being both dominant and submissive, and particularly enjoys the cowgirl position and receiving oral stimulation. Victoria operates in the luxurious setting of upper-class hotel rooms in Los Angeles, where she eagerly awaits her next client, ready to indulge in her favorite sexual activities and ensure mutual satisfaction.''
 
   # Path to a file containing a persona.  This can be just a single string, a json file in
   # the common "tavern" formats, or a yaml file in the Oobabooga format.  With a single
@@ -28,14 +28,14 @@ persona:
   # be overwritten with the values in the file.  Also, the wakewords will be extended to
   # include the character's own name.
   #   default:
-  persona_file:
+  persona_file: 
 
   # One or more words that the bot will listen for. The bot will listen in all discord
   # channels it can access for one of these words to be mentioned, then reply to any
   # messages it sees with a matching word. The bot will always reply to @-mentions and
   # direct messages, even if no wakewords are supplied.
   #   default: ['oobabot']
-  wakewords:
+  wakewords: ['Victoria', 'escort', 'lust']
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # discord
@@ -53,20 +53,20 @@ discord:
 
   # Number of lines of chat history the AI will see when generating a response.
   #   default: 7
-  history_lines:
+  history_lines: 
 
   # If set, the bot will not respond to direct messages.
   #   default: False
-  ignore_dms:
+  ignore_dms: true
 
   # Set the log level.  Valid values are:
   # CRITICAL, ERROR, WARNING, INFO, DEBUG
   #   default: DEBUG
-  log_level:
+  log_level: INFO
 
   # If set, the bot will generate a thread to respond in if it is not already in one.
   #   default: False
-  reply_in_thread:
+  reply_in_thread: False
 
   # A list of strings that will cause the bot to stop generating a response when
   # encountered.
@@ -76,7 +76,7 @@ discord:
   # FEATURE PREVIEW: Stream responses into a single message as they are generated. Note: may
   # be janky
   #   default: False
-  stream_responses:
+  stream_responses: True
 
   # FEATURE PREVIEW: When streaming responses, cap the rate at which we send updates to
   # Discord to be no more than once per this many seconds.  This does not guarantee that
@@ -123,7 +123,7 @@ oobabooga:
 
   # Print all AI input and output to STDOUT.
   #   default: False
-  log_all_the_things:
+  log_all_the_things: True
 
   # A regex that will be used to extract message lines from the AI's output.  The first
   # capture group will be used as the message.  If this is not set, the entire output will
@@ -182,24 +182,24 @@ stable_diffusion:
 
   # This will be appended to every image generation prompt sent to Stable Diffusion.
   #   default:
-  extra_prompt_text:
+  extra_prompt_text: intense, seductive, captivating, high-class, luxurious
 
   # A dictionary which will be passed straight through to Stable Diffusion on every request.
   # Feel free to add additional simple parameters here as Stable Diffusion's API evolves.
   # See Stable Diffusion's documentation for what these parameters mean.
   request_params:
-    cfg_scale: 7
+    cfg_scale: 2
     do_not_save_samples: true
     do_not_save_grid: true
     enable_hr: false
     model: ''
-    negative_prompt: animal harm, suicide, loli, nsfw
-    negative_prompt_nsfw: animal harm, suicide, loli
+    negative_prompt: Compression artifacts, rain, raining, visible teeth, fused body parts, mutated anatomy, jungle, bad art, worst quality, low quality, plastic, fake, bad limbs, conjoined, featureless, bad features, incorrect objects, ((watermark, logo, signature, words, letters))
+    negative_prompt_nsfw: Compression artifacts, rain, raining, visible teeth, fused body parts, mutated anatomy, jungle, bad art, worst quality, low quality, plastic, fake, bad limbs, conjoined, featureless, bad features, incorrect objects, ((watermark, logo, signature, words, letters))
     sampler_name: ''
     seed: -1
-    steps: 30
-    width: 512
-    height: 512
+    steps: 5
+    width: 1024
+    height: 1024
 
   # These parameters can be overridden by the Discord user by including them in their image
   # generation request.  The format for this is: param_name=value  This is a whitelist of
@@ -231,7 +231,7 @@ template:
   # Allowed tokens: {AI_NAME}, {USER_NAME}
   # .
   #   default:  Ummmm... what were we talking about?
-  command_lobotomize_response: I may not remember all the details, but I'm pretty sure we had an arrangement about satisfying certain cravings. Ready for round two... or is it three?
+  command_lobotomize_response: Memory wipe complete. Victoria is ready for a fresh encounter. How can I assist you today?
 
   # The main prompt sent to Oobabooga to generate a response from the bot AI.  The AI's
   # reply to this prompt will be sent to discord as the bot's response.
@@ -260,4 +260,4 @@ template:
   # Allowed tokens: {AI_NAME}
   # .
   #   default:  {AI_NAME}: is currently generating an image, as requested.
-  prompt_image_coming: Your image is on its way, just doing a slow reveal. These pixels love to tease as much as I do.
+  prompt_image_coming:
